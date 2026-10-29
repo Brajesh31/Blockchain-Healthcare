@@ -39,4 +39,4 @@ Use a disposable test deployment and synthetic records only. Confirm the deploye
 
 MIT licensed. See [LICENSE](LICENSE).
 
-Last updated: 2026-10-28 21:25 UTC
+Last updated: 2026-10-29 01:22 UTC
