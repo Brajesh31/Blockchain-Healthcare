@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" role="img" aria-labelledby="title desc">
+<title id="title">Blockchain Healthcare architecture</title>
+<desc id="desc">React browser interface connects through injected wallet and ethers to an EVM contract holding provider authorization and record mappings.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#14b8a6"/></linearGradient></defs>
+<rect width="1080" height="520" rx="24" fill="#0b1220"/>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+<text x="540" y="46" fill="#f8fafc" font-size="26" font-weight="700">BLOCKCHAIN HEALTHCARE</text>
+<rect x="48" y="160" width="200" height="150" rx="18" fill="#172b47" stroke="#60a5fa" stroke-width="3"/>
+<text x="148" y="215" fill="#fff" font-size="22" font-weight="700">React UI</text><text x="148" y="250" fill="#b9cce4" font-size="16">Healthcare.js</text>
+<rect x="310" y="160" width="200" height="150" rx="18" fill="#173c3b" stroke="#2dd4bf" stroke-width="3"/>
+<text x="410" y="215" fill="#fff" font-size="22" font-weight="700">Wallet</text><text x="410" y="250" fill="#b9cce4" font-size="16">Signer / Provider</text>
+<rect x="572" y="160" width="200" height="150" rx="18" fill="#292b4d" stroke="#818cf8" stroke-width="3"/>
+<text x="672" y="215" fill="#fff" font-size="22" font-weight="700">Ethers.js</text><text x="672" y="250" fill="#b9cce4" font-size="16">Contract client</text>
+<rect x="834" y="120" width="200" height="230" rx="18" fill="#403022" stroke="#fbbf24" stroke-width="3"/>
+<text x="934" y="164" fill="#fff" font-size="22" font-weight="700">EVM Contract</text>
+<rect x="854" y="190" width="160" height="55" rx="10" fill="#60452c"/><text x="934" y="223" fill="#fff" font-size="15">Provider map</text>
+<rect x="854" y="260" width="160" height="55" rx="10" fill="#60452c"/><text x="934" y="293" fill="#fff" font-size="15">Record mapping</text>
+<g stroke="url(#g)" stroke-width="6" fill="none" stroke-linecap="round"><path d="M248 235H310"/><path d="M510 235H572"/><path d="M772 235H834"/></g>
+<g fill="#9fb5d1" font-size="15"><text x="279" y="214">Connect</text><text x="541" y="214">Signer</text><text x="803" y="214">RPC</text></g>
+<text x="540" y="418" fill="#fca5a5" font-size="20" font-weight="700">Current contract stores clinical text on-chain</text>
+<text x="540" y="452" fill="#cbd5e1" font-size="16">Conceptual view of checked-in source, not a safe production architecture</text>
+</g>
+</svg>
