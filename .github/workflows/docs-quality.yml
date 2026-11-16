@@ -1,0 +1,33 @@
+name: Documentation quality
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.md"
+      - "docs/**"
+      - "scripts/**"
+      - ".github/workflows/docs-quality.yml"
+  pull_request:
+    paths:
+      - "**.md"
+      - "docs/**"
+      - "scripts/**"
+      - ".github/workflows/docs-quality.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate Markdown local links and code fences
+        run: python scripts/check_docs.py
+      - name: Validate SVG XML
+        run: python scripts/check_svg.py
