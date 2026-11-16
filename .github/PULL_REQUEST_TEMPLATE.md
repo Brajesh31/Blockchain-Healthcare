@@ -1,16 +1,46 @@
-## Summary
+## 📝 Summary
+Describe the change and affected user workflow.
 
-Describe the React, Solidity, ABI, or documentation change.
+## 🔗 Related issue
+Closes #
 
-## Verification
+## 🧩 Change category
+- [ ] React UI
+- [ ] Solidity contract
+- [ ] ABI/deployment configuration
+- [ ] Documentation/diagrams
+- [ ] Security/privacy
+- [ ] Accessibility
+- [ ] Build/dependency/CI
 
-- [ ] Tested with a disposable testnet wallet
-- [ ] Verified contract address, chain ID, bytecode, and ABI
-- [ ] Tested owner/provider permissions and rejected calls
-- [ ] Ran `npm test` and `npm run build`
-- [ ] Used only synthetic health data
+## 🧪 Validation
+- [ ] `npm ci` succeeds.
+- [ ] Feature-specific React tests run.
+- [ ] Solidity compilation and contract tests run where relevant.
+- [ ] Frontend ABI matches exact compiled contract artifact.
+- [ ] `npm run build` succeeds.
+- [ ] Wallet account/chain changes checked.
+- [ ] Keyboard and accessibility checks recorded.
 
-## Security
+## 🔐 Security and privacy
+- [ ] No real patient or clinical data used.
+- [ ] No private keys, seed phrases, credentials, or secrets committed.
+- [ ] On-chain storage implications reviewed.
+- [ ] Threat model and risk register updated where needed.
+- [ ] No clinical payloads in logs or telemetry.
 
-- [ ] No private keys, seed phrases, credentials, or patient information included
-- [ ] On-chain privacy and immutability implications reviewed
+## ♿ Accessibility
+- [ ] Inputs have visible labels.
+- [ ] Keyboard focus/order checked.
+- [ ] Dynamic wallet/transaction state is announced.
+- [ ] Color is not the sole status indicator.
+- [ ] Responsive/reflow behavior checked.
+
+## 📚 Documentation
+- [ ] API, architecture and deployment docs updated.
+- [ ] Mermaid diagrams remain valid.
+- [ ] Known issues and limitations accurately updated.
+- [ ] Screenshots and examples contain synthetic data only.
+
+## ⚠️ Risks and rollback
+Describe contract/network compatibility, migration concerns, operational impact and rollback limits. Remember on-chain writes cannot be reliably undone.
