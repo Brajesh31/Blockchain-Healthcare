@@ -1,0 +1,27 @@
+name: 🔐 Security or privacy report
+description: Report a vulnerability without disclosing sensitive health information.
+title: "[Security]: "
+labels: ["security"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not put real patient information, private keys, seed phrases, or exploit payloads in this public issue. Use the private channel in SECURITY.md for active vulnerabilities.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Sanitized summary
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential impact
+    validations:
+      required: true
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected component, network and safe reproduction
+    validations:
+      required: true
