@@ -1,6 +1,6 @@
 # 🧰 Maintenance guide
 
-## Source-of-truth order
+## Source-of-truth hierarchy
 
 1. Solidity source and compiler settings.
 2. Generated ABI/bytecode artifact for the deployed contract.
