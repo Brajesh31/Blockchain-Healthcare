@@ -1,17 +1,31 @@
-# Troubleshooting
+# 🧰 Troubleshooting
 
-## Wallet connection fails
+## Wallet connection
 
-Install and unlock a supported wallet, serve the app over a local HTTP server, allow the connection, and verify the selected network.
+**No wallet detected:** Check whether an injected wallet extension is installed and enabled. The current UI accesses `window.ethereum` without a prior capability check. A robust implementation should detect wallet absence and show a non-blocking explanation.
 
-## Contract calls revert
+**Connection rejected:** Respect the user's rejection. Do not repeatedly trigger connection prompts.
 
-Confirm the address, chain ID, ABI, deployed bytecode, signer account, and provider authorization. Only the owner may authorize providers; only authorized providers may add or read.
+**Wrong account or network:** The current UI does not fully subscribe to account/chain change events. Reloading the app may refresh state, but a code fix should explicitly reset provider, signer, contract and owner state.
 
-## ABI decoding fails
+## Contract calls
 
-Regenerate the ABI from the exact Solidity source used for deployment. The checked-in frontend expects a `tests` field that the checked-in contract does not define.
+**Transaction reverts:** Check chain ID, contract address, deployed bytecode, ABI and calling wallet. Only the owner can authorize providers; only authorized providers can add or read records.
 
-## Records are unavailable
+**ABI decode/call error:** The checked-in ABI expects a `tests` field and parameter absent from `Healthcare.sol`. Recompile the exact source and regenerate the ABI.
 
-Check the patient ID, wallet authorization, network, RPC availability, and transaction confirmation. Do not paste patient content into public logs.
+**No contract code:** Confirm the configured address belongs to the intended chain and contains deployed bytecode.
+
+**Record read fails:** The caller must be authorized. Check patient ID and RPC health.
+
+## Build and tests
+
+**npm install drift:** Use `npm ci` so the lockfile is respected.
+
+**Test failure about learn React:** The current test file is a Create React App starter test and does not represent the healthcare UI.
+
+**Build failure:** Check Node/npm compatibility with CRA 5, dependency install output and ESLint warnings. Do not suppress warnings without understanding them.
+
+## Privacy and safety
+
+Never paste patient details, private keys, seed phrases, or clinical transaction payloads into public logs, screenshots, or issues. On-chain disclosures cannot be reliably deleted.
