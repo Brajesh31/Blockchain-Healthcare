@@ -1,0 +1,30 @@
+name: 💡 Feature request
+description: Propose an improvement with acceptance criteria and privacy impact.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior and user flow
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Security, privacy and accessibility impact
+      description: Explicitly state whether any clinical data or wallet interaction is involved.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria and validation
+    validations:
+      required: true
