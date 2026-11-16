@@ -1,0 +1,39 @@
+name: 🐛 Bug report
+description: Report a reproducible frontend or smart-contract defect.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use only synthetic data. Never include patient details, private keys, seed phrases, cookies, or credentials.
+  - type: input
+    id: file
+    attributes:
+      label: Affected file or component
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node.js, npm, browser, wallet, chain ID, contract compiler version.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized errors or transaction reference
+      description: Do not paste clinical payloads, secrets, or identifying data.
